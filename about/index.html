@@ -86,14 +86,17 @@
 
 
 
+<meta name="description" content="Love your life,love yourself">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
-<meta property="og:site_name" content="Tang liang">
+<meta property="og:site_name" content="Tang&#39;s Blog">
+<meta property="og:description" content="Love your life,love yourself">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-01-07T03:53:43.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about">
+<meta name="twitter:description" content="Love your life,love yourself">
 
 
 
@@ -129,7 +132,7 @@
 
 
 
-  <title>about | Tang liang</title>
+  <title>about | Tang's Blog</title>
   
 
 
@@ -165,7 +168,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tang liang</span>
+        <span class="site-title">Tang's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -210,16 +213,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -236,6 +229,16 @@
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-board">
+          <a href="/board" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
+            
+            留言板
           </a>
         </li>
       
@@ -332,9 +335,7 @@
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAzNC85NTk2"></div>
     </div>
 
   
@@ -370,7 +371,7 @@
                 alt="Tang liang" />
             
               <p class="site-author-name" itemprop="name">Tang liang</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">Love your life,love yourself</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -447,6 +448,28 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-globe"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.imooc.com/" title="慕课网" target="_blank">慕课网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bbs.fishc.com/forum.php" title="鱼C工作室" target="_blank">鱼C工作室</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.shiyanlou.com/" title="实验楼" target="_blank">实验楼</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -483,7 +506,7 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
+  本站访客数:<span id="busuanzi_value_site_uv"></span>  |   
 </span>
 </div>
 
@@ -640,48 +663,22 @@
 
 
   
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
 
 
 
 
 
-
-
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname, 
-            owner: 'tl-Tangliang',
-            repo: 'tl-Tangliang.github.io',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: 'ebd2b0f059e6ebd6743e1c5d9c1f489abdcb997e',
-            
-                client_id: 'e09117576f3d8b375e82'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
