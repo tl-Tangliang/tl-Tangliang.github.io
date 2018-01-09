@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title><![CDATA[使用Hexo+Github搭建个人独立博客]]></title>
+    <url>%2F2018%2F01%2F09%2F%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[用了大半天的时间，才完成了这个博客从搭建到个性化设置，写下这第一篇博客，用于记录下整个过程。 安装Node.js下载Node.js 安装Git下载Git 安装Hexo选择一个盘新建一个文件夹，我是在g盘根目录下新建一个hexo文件夹，打开Git Bash $ cd g:/hexo $ npm install hexo-cli -g &emsp;&emsp; #输入后等待一会儿，直至出现 updated x package in xxs $ hexo init blog &emsp;&emsp; #完成后hexo文件夹下面就会生成一个blog文件夹 $ cd blog $ npm install $ hexo g $ hexo s 在这里用到的几个常用简写: $ hexo new = hexo n &emsp;&emsp; #新建 $ hexo generate = hexo g &emsp;&emsp; #生成静态文件 $ hexo server = hexo s &emsp;&emsp; #启动web服务 $ hexo deploy = hexo d &emsp;&emsp; #部署到远端 注意:&emsp;这些命令需将gitbash切换到blog目录下 到此为止，hexo的搭建就算完成，打开浏览器输入http://localhost:4000/ 就可以看到一篇内置的Hello World的blog了。 部署到Githubgithub的注册与配置 注册完成并登陆到github，并创建一个新的仓库 注意:&emsp;Repository name是固定的写法必须是你的用户名+github.io这种格式，它将作为你个人博客的域名，就是别人输入这个网址来访问你的博客。如我此处应该为tl-Tangliang.github.io 配置用户名和邮箱 打开gitbash，输入:$ git config --global user.name "your username" $ git config --global user.email "your email" 使用SSH密钥1、生成密钥对输入如下命令$ ssh-keygen -t rsa -C "your_email@youremail.com" &emsp;&emsp; #注意替换成自己的邮箱，然后回车 Enter file in which to save the key (/home/you/.ssh/id_rsa): &emsp;&emsp; #直接回车即可 Enter passphrase (empty for no passphrase): &emsp;&emsp; #输入密码，回车默认无密码 Enter same passphrase again: &emsp;&emsp; #再次输入密码，回车默认无密码 2、设置远程仓库上的公钥 登陆到github然后点击Settings -&gt; 左栏点击 SSH and GPG keys -&gt; 点击 New SSH key title可以随便取名，打开C:/Users/yourname/.ssh/id_rsa.pub全部复制，将其粘贴到key中 测试 $ ssh -T git@github.com 显示如下信息表示成功Your identification has been saved in /c/Users/you/.ssh/id_rsa. Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub. The key fingerprint is: 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com 部署此处需要介绍一个非常重要的文件，叫做站点配置文件hexo/blog/_config.yml。使用notepad++或者其他编辑器打开，通过配置里面的参数，来与github上的仓库进行关联。修改以下几个地方 # Deployment deploy: type: 将其修改为 type: git repo: git@github.com:yourname/yourname.github.io.git &emsp;&emsp; #注意修改为自己的名字 branch: master 如图： 注意:&emsp;每个参数”:“后面必须留有一个空格，否则会出现语法错误。 最后在终端输入 npm install hexo-deployer-git --save 在将文章部署到github上的基本步骤，需要在将命令行切换到hexo/blog目录下依次输入: hexo clean hexo g hexo d]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
