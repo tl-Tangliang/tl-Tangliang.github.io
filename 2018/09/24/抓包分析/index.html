@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python,爬虫," />
 
 
 
@@ -86,17 +86,30 @@
 
 
 
-<meta name="description" content="Love your life,love yourself">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tang&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="爬虫：抓包分析 + jsonpath解析数据概述做爬虫的时候，数据不一定在HTML中，而是隐藏在一些网址中，这时就需要通过抓包，分析出所隐藏的网址，然后找到规律进行抓取 Filddler工具安装抓包工具使用的是Filddler，进入Filddler官网 配置Filddler主要是以代理服务器的方式来进行工作，所以要在浏览器中进行配置，本文主要以火狐浏览器为例  找到浏览器中的代理设置，具体配置效果">
+<meta name="keywords" content="python,爬虫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫：抓包分析 + jsonpath解析数据">
+<meta property="og:url" content="http://yoursite.com/2018/09/24/抓包分析/index.html">
 <meta property="og:site_name" content="Tang&#39;s Blog">
-<meta property="og:description" content="Love your life,love yourself">
+<meta property="og:description" content="爬虫：抓包分析 + jsonpath解析数据概述做爬虫的时候，数据不一定在HTML中，而是隐藏在一些网址中，这时就需要通过抓包，分析出所隐藏的网址，然后找到规律进行抓取 Filddler工具安装抓包工具使用的是Filddler，进入Filddler官网 配置Filddler主要是以代理服务器的方式来进行工作，所以要在浏览器中进行配置，本文主要以火狐浏览器为例  找到浏览器中的代理设置，具体配置效果">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-07T04:03:09.846Z">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9fa5f571d65.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9fa6a11ec51.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9fa6a1ad058.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9fb1d6899ca.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9fb1d653040.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/20/5ba386c4096f5.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/20/5ba386c413173.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/20/5ba3892dcf727.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/24/5ba8e05d964a9.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/24/5ba8eac9a46e7.png">
+<meta property="og:image" content="https://i.loli.net/2018/09/24/5ba8f1af23273.png">
+<meta property="og:updated_time" content="2018-09-24T14:34:28.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tang&#39;s Blog">
-<meta name="twitter:description" content="Love your life,love yourself">
+<meta name="twitter:title" content="爬虫：抓包分析 + jsonpath解析数据">
+<meta name="twitter:description" content="爬虫：抓包分析 + jsonpath解析数据概述做爬虫的时候，数据不一定在HTML中，而是隐藏在一些网址中，这时就需要通过抓包，分析出所隐藏的网址，然后找到规律进行抓取 Filddler工具安装抓包工具使用的是Filddler，进入Filddler官网 配置Filddler主要是以代理服务器的方式来进行工作，所以要在浏览器中进行配置，本文主要以火狐浏览器为例  找到浏览器中的代理设置，具体配置效果">
+<meta name="twitter:image" content="https://i.loli.net/2018/09/17/5b9fa5f571d65.png">
 
 
 
@@ -126,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/24/抓包分析/"/>
 
 
 
 
 
-  <title>分类 | Tang's Blog</title>
+  <title>爬虫：抓包分析 + jsonpath解析数据 | Tang's Blog</title>
   
 
 
@@ -297,40 +310,302 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/24/抓包分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tang liang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tang's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 2 个分类
+          <h1 class="post-title" itemprop="name headline">爬虫：抓包分析 + jsonpath解析数据</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T22:33:32+08:00">
+                2018-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  603
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
             </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/爬虫/">爬虫</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="爬虫：抓包分析-jsonpath解析数据"><a href="#爬虫：抓包分析-jsonpath解析数据" class="headerlink" title="爬虫：抓包分析 + jsonpath解析数据"></a>爬虫：抓包分析 + jsonpath解析数据</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>做爬虫的时候，数据不一定在HTML中，而是隐藏在一些网址中，这时就需要通过抓包，分析出所隐藏的网址，然后找到规律进行抓取</p>
+<h2 id="Filddler工具安装"><a href="#Filddler工具安装" class="headerlink" title="Filddler工具安装"></a>Filddler工具安装</h2><p>抓包工具使用的是Filddler，<a href="https://www.telerik.com/fiddler" target="_blank" rel="noopener">进入Filddler官网</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>Filddler主要是以代理服务器的方式来进行工作，所以要在浏览器中进行配置，本文主要以火狐浏览器为例</p>
+<ul>
+<li>找到浏览器中的代理设置，具体配置效果如下：</li>
+</ul>
+<p><a href="https://i.loli.net/2018/09/17/5b9fa5f571d65.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/17/5b9fa5f571d65.png" alt="1.png"></a></p>
+<ul>
+<li>进入filddler输入clear指令清除窗口信息</li>
+</ul>
+<p><a href="https://i.loli.net/2018/09/17/5b9fa6a11ec51.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/17/5b9fa6a11ec51.png" alt="2.png"></a></p>
+<ul>
+<li>进入浏览器，进入任意网站浏览以下，此时Filddler已经抓到包了</li>
+</ul>
+<p><a href="https://i.loli.net/2018/09/17/5b9fa6a1ad058.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/17/5b9fa6a1ad058.png" alt="3.png"></a></p>
+<ul>
+<li>此时抓取的网页都是http协议，通过如下配置，导出CA证书，在浏览器中导入CA证书(隐私与安全–查看证书–导入)，抓取https协议</li>
+</ul>
+<p><a href="https://i.loli.net/2018/09/17/5b9fb1d6899ca.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/17/5b9fb1d6899ca.png" alt="4.png"></a></p>
+<p><a href="https://i.loli.net/2018/09/17/5b9fb1d653040.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2018/09/17/5b9fb1d653040.png" alt="5.png"></a></p>
+<h2 id="实战：抓取淘宝评论"><a href="#实战：抓取淘宝评论" class="headerlink" title="实战：抓取淘宝评论"></a>实战：抓取淘宝评论</h2><p>随意打开淘宝任意一件商品，然后打开抓包工具，刷新浏览器页面，进行抓包。<br>找到评论，并且复制评论链接</p>
+<p><img src="https://i.loli.net/2018/09/20/5ba386c4096f5.png" alt="6.png"></p>
+<p><img src="https://i.loli.net/2018/09/20/5ba386c413173.png" alt="8.png"></p>
+<p>复制网址进入浏览器检查，删去多余部分</p>
+<p><code>https://rate.tmall.com/list_detail_rate.htm?itemId=572068477776&amp;spuId=993220373&amp;sellerId=196993935&amp;order=3&amp;currentPage=19</code></p>
+<p>注意分析上面链接，currentPage就是控制页码的</p>
+<p>此时解析此数据可以通过三种方法，正则表达式，xpath，jsonpath，本文采用jsonpath，cmd输入<code>pip install jsonpath</code>安装，<a href="https://docs.python.org/3/library/json.html" target="_blank" rel="noopener">jsonpath官方文档</a></p>
+<p>可以看出数据的格式很像json，可以将数据复制到<a href="https://www.json.cn/" target="_blank" rel="noopener">json在线解析及格式化验证</a>验证，去掉前面一部分数据和最后一个括号后结果如图：</p>
+<p><img src="https://i.loli.net/2018/09/20/5ba3892dcf727.png" alt="9.png"></p>
+<p>这样观看结构清晰，有利于分析数据</p>
+<p><img src="https://i.loli.net/2018/09/24/5ba8e05d964a9.png" alt="Snipaste_2018-09-24_21-01-01.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> jsonpath</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://rate.tmall.com/list_detail_rate.htm?itemId=572068477776&amp;spuId=993220373&amp;sellerId=196993935&amp;order=3&amp;currentPage=1'</span> req = urllib.request.Request(url)</span><br><span class="line">req.add_header(<span class="string">'User-Agent'</span>,<span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36'</span>)</span><br><span class="line">html = urllib.request.urlopen(req).read()</span><br><span class="line">html = html[<span class="number">13</span>:<span class="number">-1</span>].decode(<span class="string">'utf-8'</span>)</span><br><span class="line">jsonObj = json.loads(html)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'totalCount'</span>,jsonpath.jsonpath(jsonObj,<span class="string">'$.rateDetail.rateCount.total'</span>))</span><br><span class="line">print(<span class="string">'content'</span>,jsonpath.jsonpath(jsonObj,<span class="string">'$.rateDetail.rateList[*].rateContent'</span>))</span><br><span class="line">print(<span class="string">'UserNick'</span>,jsonpath.jsonpath(jsonObj,<span class="string">'$.rateDetail.rateList[*].displayUserNick'</span>))</span><br><span class="line">print(<span class="string">'Size'</span>,jsonpath.jsonpath(jsonObj,<span class="string">'$.rateDetail.rateList[*].auctionSku'</span>))</span><br><span class="line">print(<span class="string">'rateDate'</span>,jsonpath.jsonpath(jsonObj,<span class="string">'$.rateDetail.rateList[*].rateDate'</span>))</span><br></pre></td></tr></table></figure>
+<p>实现效果如图:</p>
+<p><img src="https://i.loli.net/2018/09/24/5ba8eac9a46e7.png" alt="Snipaste_2018-09-24_21-44-49.png"></p>
+<p>最后经过完善，实现的最终效果如下:</p>
+<p><img src="https://i.loli.net/2018/09/24/5ba8f1af23273.png" alt="Snipaste_2018-09-24_22-15-58.png"></p>
+<h2 id="参考的文章："><a href="#参考的文章：" class="headerlink" title="参考的文章："></a>参考的文章：</h2><ul>
+<li><a href="https://blog.csdn.net/sinat_35360663/article/details/78470722" target="_blank" rel="noopener">https://blog.csdn.net/sinat_35360663/article/details/78470722</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+	
+		<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/09/24/抓包分析/">爬虫：抓包分析 + jsonpath解析数据</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Tang liang 的个人博客">Tang liang</a></p>
+  <p><span>发布时间:</span>2018年09月24日 - 22:09</p>
+  <p><span>最后更新:</span>2018年09月24日 - 22:09</p>
+  <p><span>原始链接:</span><a href="/2018/09/24/抓包分析/" title="爬虫：抓包分析 + jsonpath解析数据">http://yoursite.com/2018/09/24/抓包分析/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/09/24/抓包分析/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Tang liang 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Tang liang 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" <i class="fa fa-tag"></i>python</a>
+          
+            <a href="/tags/爬虫/" <i class="fa fa-tag"></i>爬虫</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/09/搭建hexo博客/" rel="next" title="使用Hexo+Github搭建个人独立博客">
+                <i class="fa fa-chevron-left"></i> 使用Hexo+Github搭建个人独立博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -339,6 +614,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzAzNC85NTk2"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -359,8 +643,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -474,6 +767,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#爬虫：抓包分析-jsonpath解析数据"><span class="nav-number">1.</span> <span class="nav-text">爬虫：抓包分析 + jsonpath解析数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Filddler工具安装"><span class="nav-number">1.2.</span> <span class="nav-text">Filddler工具安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.2.1.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战：抓取淘宝评论"><span class="nav-number">1.3.</span> <span class="nav-text">实战：抓取淘宝评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考的文章："><span class="nav-number">1.4.</span> <span class="nav-text">参考的文章：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -660,6 +969,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -95,7 +95,7 @@
 <meta property="og:description" content="用了大半天的时间，才完成了这个博客从搭建到个性化设置，写下这第一篇博客，用于记录下整个过程。 安装Node.js下载Node.js 安装Git下载Git 安装Hexo选择一个盘新建一个文件夹，我是在g盘根目录下新建一个hexo文件夹，打开Git Bash $ cd g:/hexo $ npm install hexo-cli -g &amp;emsp;&amp;emsp; #输入后等待一会儿，直至出现 upda">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hexo-blog-1252823127.cos.ap-chengdu.myqcloud.com/blog_img/glenn-carstens-peters-203007.jpg">
-<meta property="og:updated_time" content="2018-01-09T08:48:06.362Z">
+<meta property="og:updated_time" content="2018-01-17T08:55:49.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo+Github搭建个人独立博客">
 <meta name="twitter:description" content="用了大半天的时间，才完成了这个博客从搭建到个性化设置，写下这第一篇博客，用于记录下整个过程。 安装Node.js下载Node.js 安装Git下载Git 安装Hexo选择一个盘新建一个文件夹，我是在g盘根目录下新建一个hexo文件夹，打开Git Bash $ cd g:/hexo $ npm install hexo-cli -g &amp;emsp;&amp;emsp; #输入后等待一会儿，直至出现 upda">
@@ -435,7 +435,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://hexo-blog-1252823127.cos.ap-chengdu.myqcloud.com/blog_img/glenn-carstens-peters-203007.jpg" rel="gallery_cjc7eflz600019wqq0qmxsyen"
+                 href="https://hexo-blog-1252823127.cos.ap-chengdu.myqcloud.com/blog_img/glenn-carstens-peters-203007.jpg" rel="gallery_cjmgecvyw0001egqq3jpalple"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://hexo-blog-1252823127.cos.ap-chengdu.myqcloud.com/blog_img/glenn-carstens-peters-203007.jpg" itemprop="contentUrl"/>
               </a>
@@ -486,16 +486,17 @@ $ hexo deploy = hexo d<font color="#006EFF"> &emsp;&emsp; #部署到远端</font
 <li>配置用户名和邮箱<br> 打开gitbash，输入:<pre><code>$ git config --global user.name "your username"
 $ git config --global user.email "your email"
 </code></pre></li>
-<li>使用SSH密钥<br>1、生成密钥对<br>输入如下命令<pre><code>$ ssh-keygen -t rsa -C "your_email@youremail.com"<font color="#006EFF"> &emsp;&emsp; #注意替换成自己的邮箱，然后回车</font>
+<li>使用SSH密钥</li>
+</ul>
+<p>1、生成密钥对<br>输入如下命令</p>
+<pre><code>$ ssh-keygen -t rsa -C "your_email@youremail.com"<font color="#006EFF"> &emsp;&emsp; #注意替换成自己的邮箱，然后回车</font>
 Enter file in which to save the key (/home/you/.ssh/id_rsa):<font color="#006EFF"> &emsp;&emsp; #直接回车即可</font>
 Enter passphrase (empty for no passphrase):<font color="#006EFF"> &emsp;&emsp; #输入密码，回车默认无密码</font>
 Enter same passphrase again:<font color="#006EFF"> &emsp;&emsp; #再次输入密码，回车默认无密码</font>
 </code></pre>  
 
 
-</li>
-</ul>
-<p>2、设置远程仓库上的公钥<br> 登陆到github然后点击<code><font color="#FF5600">Settings -&gt; 左栏点击 SSH and GPG keys -&gt; 点击 New SSH key</font></code></p>
+<p>  2、设置远程仓库上的公钥<br> 登陆到github然后点击<code><font color="#FF5600">Settings -&gt; 左栏点击 SSH and GPG keys -&gt; 点击 New SSH key</font></code></p>
 <p> <img src="https://hexo-blog-1252823127.cos.ap-chengdu.myqcloud.com/blog_img/QQ%E6%88%AA%E5%9B%BE20180109151659.png" alt="此处输入图片的描述"></p>
 <p>title可以随便取名，打开<code><font color="#FF5600">C:/Users/yourname/.ssh/id_rsa.pub</font></code>全部复制，将其粘贴到key中<br><img src="https://hexo-blog-1252823127.cos.ap-chengdu.myqcloud.com/blog_img/QQ%E6%88%AA%E5%9B%BE20180109152440.png" alt="此处输入图片的描述"></p>
 <p> 测试</p>
@@ -551,7 +552,7 @@ hexo d
   <p><span>本文标题:</span><a href="/2018/01/09/搭建hexo博客/">使用Hexo+Github搭建个人独立博客</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Tang liang 的个人博客">Tang liang</a></p>
   <p><span>发布时间:</span>2018年01月09日 - 10:01</p>
-  <p><span>最后更新:</span>2018年01月09日 - 16:01</p>
+  <p><span>最后更新:</span>2018年01月17日 - 16:01</p>
   <p><span>原始链接:</span><a href="/2018/01/09/搭建hexo博客/" title="使用Hexo+Github搭建个人独立博客">http://yoursite.com/2018/01/09/搭建hexo博客/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/01/09/搭建hexo博客/"  aria-label="复制成功！"></i></span>
   </p>
@@ -624,6 +625,22 @@ hexo d
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/24/抓包分析/" rel="prev" title="爬虫：抓包分析 + jsonpath解析数据">
+                爬虫：抓包分析 + jsonpath解析数据 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -706,7 +723,7 @@ hexo d
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -717,7 +734,7 @@ hexo d
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -728,7 +745,7 @@ hexo d
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
