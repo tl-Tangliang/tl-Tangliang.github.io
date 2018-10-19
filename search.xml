@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[爬取更新信息实现邮箱推送]]></title>
-    <url>%2F2018%2F10%2F19%2F%E7%88%AC%E5%8F%96%E6%96%B0%E9%97%BB%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E6%8E%A8%E9%80%81%2F</url>
+    <url>%2F2018%2F10%2F19%2F%E7%88%AC%E5%8F%96%E5%AD%A6%E6%A0%A1%E7%A0%94%E6%8B%9B%E5%A4%84%2F</url>
     <content type="text"><![CDATA[爬取更新信息实现邮箱推送 本人由于考研，要随时获取该校招生信息的新闻，比如现场确认通知、复试通知，每次隔段时间就需要访问网站进行查看，以免错过重要信息，为解决每次访问网站的麻烦，于是写了这么一个爬虫，在有新闻更新的时候，就通过爬取新闻内容然后通过邮箱发送。该爬虫使用的是urllib库。 邮件发送 我使用的是SMTP_SSL来发送邮件，我最初使用的是SMTP服务来发送邮件，爬虫部署到阿里云服务器上时，在使用SMTP进行发送邮件的时候，会出现错误。这个原因的产生是因为阿里云服务器关闭了25号端口。为了解决25号端口的问题，可以采用带有SSL的SMTP服务。这个服务采用的端口是465。 以下是发送邮件的代码： 123456789101112131415def _format_addr(s): name, addr = parseaddr(s) return formataddr((Header(name, 'utf-8').encode(), addr))def send_email(html_msg, title, from_addr, password,to_addr): smtp_server = 'smtp.163.com' msg = MIMEText(html_msg, 'html', 'utf-8') msg['From'] = _format_addr("来自小爬爬&lt;%s&gt;" % from_addr) msg['To'] = _format_addr('xx同学&lt;%s&gt;' % to_addr) msg['Subject'] = Header(title, 'utf-8').encode() server = SMTP_SSL(smtp_server) server.login(from_addr, password) server.sendmail(from_addr, to_addr, msg.as_string()) server.quit() 程序主体部分如下： 123456789101112while True: try: titles = get_links(url_open(info['url'])) if info['old_msg'] is None: info['old_msg'] = titles else: differ = get_differ(info['old_msg'], titles) if differ: send_html = get_html(url_open(differ[0])) send_email(send_html, differ[1], info['from_addr'],info['password'],info['to_addr']) info['old_msg'] = titles time.sleep(3600) 设置程序每隔一个小时执行一次，做一只文明优雅的小爬虫，否则会对服务器造成压力而无法服务 实现后效果如图： 参考文章： SMTP发送邮件 阿里云上使用smtp的25号端口被禁用的问题]]></content>
       <categories>
         <category>爬虫</category>
